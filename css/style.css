@@ -1,0 +1,218 @@
+*{
+    margin: auto;
+}
+*:focus {
+    outline: none;
+}
+
+body{
+    font-family: Roboto, sans-serif;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-color: #00f;
+}
+#container{
+    width: 90%;
+    margin: auto;
+}
+.contentWidth{
+    width: fit-content;
+    width: -moz-fit-content;    
+    width: -o-fit-content;  
+}
+.clear-float{
+    clear: both;
+}
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+ul{
+    list-style: none;
+    display: inline;
+}
+ul li{
+    display: inline;
+    text-transform: capitalize;
+    color: #FFF;
+    font-size: 1rem;
+    margin-right:  2rem;
+}
+ul li a:hover{
+    color: #fd5949;
+}
+/* ----------------------------------------- */
+
+header{
+    padding: 1rem;
+    padding-bottom: 0rem;
+    margin: auto;
+}
+
+#left-header{
+    float: left;
+}
+#left-header span{
+    color: #FFF;
+    font-size: 2rem; 
+}
+#left-header ul{
+    margin-left: 1rem;
+}
+#left-header ul li{
+    text-transform: capitalize;
+    color: #FFF;
+    font-size: 1.1rem;
+}
+
+#right-header{
+    float: right;
+}
+#right-header span{
+    color: #FFF;
+    font-size: 1.1rem;
+    margin-right: 1.2rem;
+}
+.twitter:hover{
+    color: #49a1f2;
+}
+.facebook:hover{
+    color: #3b569c;
+}
+.google:hover{
+    color: #d64c3e;
+}
+.instagram:hover{
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%,
+    #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ---------------------------------- */
+
+section{
+    padding: 7rem;
+    padding-bottom: 0rem;
+    text-align: center;
+
+}
+#logo{
+    float: left;
+    margin: 3rem;
+}
+#logo #logoImage{
+    color: #FFF;
+    font-size: 10rem;
+    float: left;
+}
+#logo #logoImage span{
+    width: fit-content;
+}
+#logo #logoText{
+    float: right;
+    padding: 3rem;
+    margin: auto;
+}
+#logo h1{
+    color: white;
+    display: block;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+}
+#logo h3{
+    color: #FFF;
+    display: block;
+}
+
+#signupBox{
+    float: right;
+    background: #FFF;
+    border-radius: 1%;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+#signupBox #share{
+    background: #ff625f;
+    margin: auto;
+    margin-top: -2.5rem;
+    padding: 1rem 3rem; 
+    color: #FFF;
+    border-radius: 3%;
+    box-shadow: 0px 0px 10px #777;
+}
+#signupBox #share span{
+    margin: 1rem;
+    display: inline;
+}
+#signupBox h3{
+    margin: auto;
+    padding-bottom: 2rem; 
+    font-weight: normal;
+    text-transform: capitalize;
+}
+#signupBox #formDiv{
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+#signupBox hr{
+    border: none;
+    margin: 1rem;
+}
+#signupBox form h3{
+    padding: 2rem 0rem 1rem 0rem; 
+    color: #222;
+}
+#signupBox form span{
+    margin-right: 1rem;
+    color: #555;
+}
+#signupBox form input{
+    display: inline;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: #DDD 2px solid;
+    background: none;
+    color: #222;
+}
+#signupBox form input[name="name"]{
+    text-transform: capitalize;
+}
+#signupBox form input:focus{
+    border-bottom: #4758c0 2px solid;
+}
+#signupBox form input[type="submit"]{
+    text-transform: uppercase;
+    background: none;
+    font-weight: bold;
+    color: #4758c0;
+    font-size: 1rem;
+    border: none;
+    padding: 0.5rem;
+}
+
+/* ---------------------------------- */
+
+footer{
+    padding: 2rem;
+    padding-top: 5rem;
+}
+footer ul li{
+    text-transform: uppercase;
+}
+
+#left-footer{
+    float: left;
+}
+#right-footer{
+    float: right;
+}
+footer p{
+    color: #fff;
+}
