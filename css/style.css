@@ -187,7 +187,7 @@ section{
 #signupBox form input:focus{
     border-bottom: #4758c0 2px solid;
 }
-#signupBox form input[type="submit"]{
+#signupBox form input[id="subBut"]{
     text-transform: uppercase;
     background: none;
     font-weight: bold;
@@ -196,7 +196,7 @@ section{
     border: none;
     padding: 0.5rem;
 }
-#signupBox form input[type="submit"]:disabled{
+#signupBox form input[id="subBut"]:disabled{
     color: #a8abc5;
 }
 /* ---------------------------------- */

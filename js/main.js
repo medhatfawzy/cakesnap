@@ -1,7 +1,8 @@
 "use strict";
-var submitBut = document.getElementById("submit");
+var submitBut = document.getElementById("subBut");
 var passRegex = /^.{5,16}$/;
-var emailRegex = /^[a-z]\w{3,7}@\w{3,10}\.\w{2,6}/i;
+var emailRegex = /[a-z]\w{3,7}@\w{3,10}\.\w{2,6}$/i;
+var nameRegx = /^[a-z]{2,12}$/i;
 
 var valdation = ()=>{
     
@@ -15,8 +16,11 @@ var valdation = ()=>{
     else if(!passRegex.test(password.value)) {
         console.log("invalid password");
     }
-    else if(name.value === "") {
-        console.log("Please input your name!");
+    else if(!nameRegx.test(name.value)) {
+        console.log("invalid name");
+    }
+    else{
+        document.getElementById("userForm").submit();
     }
 };
 
