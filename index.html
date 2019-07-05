@@ -55,18 +55,32 @@
                     <span><a href="#"><i class="fab fa-google-plus-g google"></i></a></span>
                 </div>
                 <div id="formDiv">
-                    <form action="">
+                    <script type="text/javascript" language="javascript">
+                        function checkform()
+                        {
+                            var f = document.forms["userForm"].elements;
+                            var cansubmit = true;
+                    
+                            for (var i = 0; i < f.length; i++) {
+                                if (f[i].value.length == 0) cansubmit = false;
+                            }
+                    
+                            document.getElementById('submit').disabled = !cansubmit;
+                        }
+                    </script> 
+                        
+                    <form action="" id="userForm">
                         <h3>or be classical</h3>
                         <span><i class="far fa-user-circle"></i></span>
-                        <input type="text" placeholder="First Name..." name="name">
+                        <input type="text" placeholder="First Name..." name="name" id="name" onKeyup="checkform()">
                         <hr>
                         <span><i class="fas fa-envelope"></i></span>
-                        <input type="email" placeholder="Email..." name="email">
+                        <input type="email" placeholder="Email..." name="email" id="email" onKeyup="checkform()">
                         <hr>
                         <span><i class="fas fa-lock"></i></span>
-                        <input type="password" placeholder="Password..." name="password">
+                        <input type="password" placeholder="Password..." name="password" id="password" onKeyup="checkform()">
                         <hr>
-                        <input type="submit" value="get started">
+                        <input type="submit" disabled="disabled" value="get started" id="submit">
                     </form>
                 </div>
             </div>
@@ -88,5 +102,6 @@
             </div>
         </div>
     </footer>
+    <script src="./js/main.js"></script>
 </body>
 </html>

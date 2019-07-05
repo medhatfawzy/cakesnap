@@ -196,7 +196,9 @@ section{
     border: none;
     padding: 0.5rem;
 }
-
+#signupBox form input[type="submit"]:disabled{
+    color: #a8abc5;
+}
 /* ---------------------------------- */
 
 footer{
