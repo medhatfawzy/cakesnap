@@ -6,7 +6,7 @@
 }
 
 body{
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-image: url("../images/background.jpg");
     background-size: cover;
     background-blend-mode: multiply;
@@ -123,11 +123,12 @@ section{
     margin: auto;
 }
 #logo h1{
+    font-family: 'Abril Fatface', cursive;
     color: white;
     display: block;
     font-size: 50px;
-    text-transform: uppercase;
     text-align: center;
+    text-transform: uppercase;
 }
 #logo h3{
     color: #FFF;
