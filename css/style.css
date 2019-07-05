@@ -25,6 +25,9 @@ body{
 .clear-float{
     clear: both;
 }
+.fa-times{
+    color: #F00;
+}
 a{
     text-decoration: none;
     color: currentColor;
