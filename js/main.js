@@ -1,7 +1,7 @@
 "use strict";
 var submitBut = document.getElementById("subBut");
 var passRegex = /^.{5,16}$/;
-var emailRegex = /[a-z]\w{3,7}@\w{3,10}\.\w{2,6}$/i;
+var emailRegex = /^[a-z]\w{3,7}@\w{3,10}\.\w{2,6}$/i;
 var nameRegx = /^[a-z]{2,12}$/i;
 
 var displayX = (field)=>{
@@ -14,10 +14,10 @@ var removeX = (field)=>{
         icon.innerHTML = `<i class="far fa-user-circle"></i>`;    
     }
     else if(field.id === "email"){
-        icon.innerHTML = `<i class="fas fa-envelope">`;
+        icon.innerHTML = `<i class="fas fa-envelope"></i>`;
     }
     else if(field.id === "password"){
-        icon.innerHTML = `<i class="fas fa-lock">`;
+        icon.innerHTML = `<i class="fas fa-lock"></i>`;
     }
 
 };

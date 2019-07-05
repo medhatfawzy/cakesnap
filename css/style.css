@@ -46,6 +46,7 @@ ul li{
 ul li a:hover{
     color: #fd5949;
 }
+
 /* ----------------------------------------- */
 
 header{
@@ -102,8 +103,8 @@ section{
     padding: 7rem;
     padding-bottom: 0rem;
     text-align: center;
-
 }
+
 #logo{
     float: left;
     margin: 3rem;
@@ -202,12 +203,14 @@ section{
 #signupBox form input[id="subBut"]:disabled{
     color: #a8abc5;
 }
+
 /* ---------------------------------- */
 
 footer{
     padding: 2rem;
     padding-top: 5rem;
 }
+
 footer ul li{
     text-transform: uppercase;
 }
