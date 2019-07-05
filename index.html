@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CakeSnap</title>
     <link href="images/logo.png" type="image/x-icon" rel="shortcut icon">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/c0946f33cb.js"></script>
 </head>
@@ -58,7 +57,7 @@
                     <span><a href="#"><i class="fab fa-google-plus-g google"></i></a></span>
                 </div>
                 <div id="formDiv">
-                    <script type="text/javascript" language="javascript">
+                    <!-- <script type="text/javascript" language="javascript">
                         function checkform()
                         {
                             var f = document.forms["userForm"].elements;
@@ -70,20 +69,20 @@
                     
                             document.getElementById('subBut').disabled = !cansubmit;
                         }
-                    </script> 
+                    </script>  -->
                         
-                    <form name="userForm" id="userForm">
+                    <form name="userForm" id="userForm" action="action_page.php">
                         <h3>or be classical</h3>
                         <span id="nameIcon"><i class="far fa-user-circle"></i></span>
-                        <input type="text" placeholder="First Name..." name="name" id="name" onKeyup="checkform()">
+                        <input type="text" placeholder="First Name..." name="name" id="name" required >
                         <hr>
                         <span id="emailIcon"><i class="fas fa-envelope"></i></span>
-                        <input type="email" placeholder="Email..." name="email" id="email" onKeyup="checkform()">
+                        <input type="email" placeholder="Email..." name="email" id="email" required >
                         <hr>
                         <span id="passwordIcon"><i class="fas fa-lock"></i></span>
-                        <input type="password" placeholder="Password..." name="password" id="password" onKeyup="checkform()">
+                        <input type="password" placeholder="Password..." name="password" id="password" required>
                         <hr>
-                        <input type="button" disabled="disabled" value="get started" id="subBut" name="subBut">
+                        <input type="button"  value="get started" id="subBut" name="subBut">
                     </form>
                 </div>
             </div>
