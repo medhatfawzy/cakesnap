@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CakeSnap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="images/logo.png" type="image/x-icon" rel="shortcut icon">
-    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/c0946f33cb.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>   
+    <script src="js/respond.js"></script>   
+    <![endif]-->
+    <title>CakeSnap</title>
+    <meta name="description" content="Intelligent customer delight managment.">
 </head>
 <body>
     <header>
@@ -31,13 +38,11 @@
     </header>
 
     <section>
-        <div id="container">
+        <div>
             <div id="logo">
                 <div class="contentWidth">
                     <div id="logoImage" class="contentWidth">
-                        <span>
-                            <i class="fas fa-drafting-compass"></i>
-                        </span>
+                        <span><i class="fas fa-drafting-compass"></i></span>
                     </div>
                     <div id="logoText" class="contentWidth">
                         <h1>cake</h1>
@@ -57,7 +62,7 @@
                     <span><a href="#"><i class="fab fa-google-plus-g google"></i></a></span>
                 </div>
                 <div id="formDiv">
-                    <!-- <script type="text/javascript" language="javascript">
+                    <script type="text/javascript" language="javascript">
                         function checkform()
                         {
                             var f = document.forms["userForm"].elements;
@@ -69,20 +74,20 @@
                     
                             document.getElementById('subBut').disabled = !cansubmit;
                         }
-                    </script>  -->
+                    </script> 
                         
-                    <form name="userForm" id="userForm" action="action_page.php">
+                    <form name="userForm" id="userForm" action="action_page.php" method="POST" enctype="multipart/form-data">
                         <h3>or be classical</h3>
                         <span id="nameIcon"><i class="far fa-user-circle"></i></span>
-                        <input type="text" placeholder="First Name..." name="name" id="name" required >
+                        <input type="text" placeholder="First Name..." name="name" id="name" onkeyup="checkform()" required >
                         <hr>
                         <span id="emailIcon"><i class="fas fa-envelope"></i></span>
-                        <input type="email" placeholder="Email..." name="email" id="email" required >
+                        <input type="email" placeholder="Email..." name="email" id="email" onkeyup="checkform()" required >
                         <hr>
                         <span id="passwordIcon"><i class="fas fa-lock"></i></span>
-                        <input type="password" placeholder="Password..." name="password" id="password" required>
+                        <input type="password" placeholder="Password..." name="password" id="password" onkeyup="checkform()" required>
                         <hr>
-                        <input type="button"  value="get started" id="subBut" name="subBut">
+                        <input type="button" disabled="disabled" value="get started" id="subBut" name="subBut">
                     </form>
                 </div>
             </div>
@@ -91,18 +96,16 @@
     </section>
 
     <footer>
-        <div class="container">
-            <div id="left-footer">
-                <ul>
-                    <li><a href="index.html">Cakesnap</a></li>
-                    <li><a href="aboutus.html">about us</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="faq.html">faq</a></li>
-                </ul>
-            </div>
-            <div id="right-footer">
-                <p>&copy; 2019, made with <i class="fas fa-heart"></i> by MedhaT</p>
-            </div>
+        <div id="left-footer" class="contentWidth">
+            <ul>
+                <li><a href="index.html">cakesnap</a></li>
+                <li><a href="aboutus.html">about us</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="faq.html">faq</a></li>
+            </ul>
+        </div>
+        <div id="right-footer" class="contentWidth">
+            <p>&copy; 2019, made with <i class="fas fa-heart"></i> by MedhaT</p>
         </div>
     </footer>
     <script src="js/main.js"></script>

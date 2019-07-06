@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 *{
-    margin: auto;
+    margin: 0;
+    padding: 0;
 }
 *:focus {
     outline: none;
@@ -13,12 +14,9 @@ body{
     background-size: cover;
     background-blend-mode: multiply;
     background-attachment: fixed;
-    background-color: #00f;
+    background-color: rgb(0, 0, 255);
 }
-#container{
-    width: 90%;
-    margin: auto;
-}
+
 .contentWidth{
     width: fit-content;
     width: -moz-fit-content;    
@@ -26,6 +24,8 @@ body{
 }
 .clear-float{
     clear: both;
+    width: 0rem;
+    display: block;
 }
 .fa-times{
     color: #F00;
@@ -37,23 +37,25 @@ a{
 ul{
     list-style: none;
     display: inline;
+    margin: 0;
+    padding: 0;
 }
 ul li{
-    display: inline;
+    display: inline-block;
     text-transform: capitalize;
     color: #FFF;
     font-size: 1rem;
-    margin-right:  2rem;
+    margin-right:  1rem;
 }
 ul li a:hover{
     color: #fd5949;
+    text-decoration: none;
 }
 
 /* ----------------------------------------- */
 
 header{
     padding: 1rem;
-    padding-bottom: 0rem;
     margin: auto;
 }
 
@@ -63,14 +65,12 @@ header{
 #left-header span{
     color: #FFF;
     font-size: 2rem; 
-}
-#left-header ul{
-    margin-left: 1rem;
+    margin-right: 1rem;
 }
 #left-header ul li{
     text-transform: capitalize;
     color: #FFF;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 #right-header{
@@ -78,8 +78,8 @@ header{
 }
 #right-header span{
     color: #FFF;
-    font-size: 1.1rem;
-    margin-right: 1.2rem;
+    font-size: 1rem;
+    margin-right: 1rem;
 }
 .twitter:hover{
     color: #49a1f2;
@@ -102,14 +102,14 @@ header{
 /* ---------------------------------- */
 
 section{
-    padding: 7rem;
-    padding-bottom: 0rem;
+    padding: 4.3rem 10rem;
+    margin: auto;
     text-align: center;
+    width: 90%;
 }
 
 #logo{
     float: left;
-    margin: 3rem;
 }
 #logo #logoImage{
     color: #FFF;
@@ -121,7 +121,7 @@ section{
 }
 #logo #logoText{
     float: right;
-    padding: 3rem;
+    padding: 4rem 3rem;
     margin: auto;
 }
 #logo h1{
@@ -210,8 +210,8 @@ section{
 /* ---------------------------------- */
 
 footer{
-    padding: 2rem;
-    padding-top: 5rem;
+    padding: 1rem;
+    margin: auto;
 }
 
 footer ul li{

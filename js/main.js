@@ -1,7 +1,7 @@
 "use strict";
 var submitBut = document.getElementById("subBut");
 var passRegex = /^.{5,16}$/;
-var emailRegex = /^[a-z]\w{3,10}@\w{3,10}\.\w{2,6}$/i;
+var emailRegex = /^[a-z]\w{3,15}@\w{3,10}\.\w{2,6}$/i;
 var nameRegx = /^[a-z]{2,12}$/i;
 
 var displayX = (field)=>{
