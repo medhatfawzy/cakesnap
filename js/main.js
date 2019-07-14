@@ -1,8 +1,8 @@
 "use strict";
-var submitBut = document.getElementById("subBut");
-var passRegex = /^.{5,16}$/;
-var emailRegex = /^[a-z]\w{3,15}@\w{3,10}\.\w{2,6}$/i;
-var nameRegx = /^[a-z]{2,12}$/i;
+const submitBtn = document.getElementById("subBut");
+const passRegex = /^.{5,16}$/;
+const emailRegex = /^[a-z]\w{3,15}@\w{3,10}\.\w{2,6}$/i;
+const nameRegx = /^[a-z]{2,12}$/i;
 
 var displayX = (field)=>{
     let icon = document.getElementById(`${field.id}Icon`);
@@ -42,4 +42,4 @@ var valdation = ()=> {
     if(noError) document.getElementById("userForm").submit();
 };
 
-submitBut.onclick = valdation;
+submitBtn.onclick = valdation;
