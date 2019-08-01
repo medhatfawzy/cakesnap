@@ -81,13 +81,11 @@ ul li:last-child{
 
 .flex{
     display: flex;
-    /* the bottom line of code is to support safari */
-    display: -webkit-flex;
+    display: -webkit-flex; /* to support safari */
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     align-content: space-between;
-    /* border: 1px dashed #FFF; */
 }
 .flex-col{
     flex-direction: column;
