@@ -23,6 +23,11 @@ body{
     background-blend-mode: multiply;
     background-attachment: fixed;
     background-color: rgb(0, 0, 255);
+    height: 100vh;
+    display: flex;
+    display: -webkit-flex; /* to support safari */
+    flex-direction: column;
+    justify-content: space-between;
 }
 a{
     text-decoration: none;
@@ -102,7 +107,6 @@ header, footer{
 section{
     color: #FFF;
     font-size: 1rem; 
-    margin: 3.7rem;
 }
 
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
