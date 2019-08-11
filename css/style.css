@@ -82,6 +82,8 @@ ul li:last-child {
   display: -webkit-flex; /* to support safari */
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  /* align-content: center; */
 }
 .flex-col {
   flex-direction: column;
