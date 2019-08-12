@@ -79,8 +79,11 @@ ul li:last-child {
 }
 
 .flex {
-  display: flex;
+  display: -webkit-box;      
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-flex; /* to support safari */
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
