@@ -2,16 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CakeSnap - About Us</title>
-    <link href="images/logo.png" type="image/x-icon" rel="shortcut icon" />
+    <link href="icons/logo.png" type="image/x-icon" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://kit.fontawesome.com/c0946f33cb.js"></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.js"></script>
+    <![endif]-->
+    <title>CakeSnap</title>
+    <meta
+      name="description"
+      content="Intelligent customer delight managment."
+    />
   </head>
   <body>
-    <div class="container-fluid">
-      <header class="flex">
+    <header class="flex">
+      <div>
         <nav>
           <ul>
             <li>
@@ -21,21 +33,28 @@
             <li><a href="#">influencer</a></li>
           </ul>
         </nav>
-        <div>
-          <ul>
-            <li><a href="#">login/signup</a></li>
-            <li>
-              <a href="#"><i class="fab fa-twitter twitter"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fab fa-facebook-square facebook"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fab fa-instagram instagram"></i></a>
-            </li>
-          </ul>
-        </div>
-      </header>
+      </div>
+      <div>
+        <ul>
+          <li><a href="#">login/signup</a></li>
+          <li>
+            <svg class="icon twitter" id="emailIcon">
+              <use xlink:href="icons/sprite.svg#icon-twitter"></use>
+            </svg>
+          </li>
+          <li>
+            <svg class="icon facebook" id="emailIcon">
+              <use xlink:href="icons/sprite.svg#icon-facebook"></use>
+            </svg>
+          </li>
+          <li>
+            <svg class="icon instagram" id="emailIcon">
+              <use xlink:href="icons/sprite.svg#icon-instagram"></use>
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </header>
       <!-- ////////////////////////////////////////////////////// -->
       <footer class="flex">
         <div>

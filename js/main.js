@@ -6,23 +6,28 @@ const nameRegx = /^[a-z]{2,12}$/i;
 
 var displayX = field => {
   let icon = document.getElementById(`${field.id}Icon`);
-  icon.innerHTML = `<i class="fas fa-times"></i>`;
+  icon.innerHTML = `<use class="error" xlink:href="icons/sprite.svg#icon-close"></use>`;
   icon.classList.add("animated", "flash");
   icon.addEventListener("animationend", () =>
     icon.classList.remove("animated", "flash")
   );
+  //To support older browsers
   icon.addEventListener("webkitanimationend", () =>
     icon.classList.remove("animated", "shake")
   );
 };
 var removeX = field => {
   let icon = document.getElementById(`${field.id}Icon`);
-  if (field.id === "name") {
-    icon.innerHTML = `<i class="far fa-user-circle"></i>`;
-  } else if (field.id === "email") {
-    icon.innerHTML = `<i class="fas fa-envelope"></i>`;
-  } else if (field.id === "password") {
-    icon.innerHTML = `<i class="fas fa-lock"></i>`;
+  if (
+    icon.innerHTML === `<use class="error" xlink:href="icons/sprite.svg#icon-close"></use>`
+  ) {
+    if (field.id === "name") {
+      icon.innerHTML = `<use xlink:href="icons/sprite.svg#icon-user"></use>`;
+    } else if (field.id === "email") {
+      icon.innerHTML = `<use xlink:href="icons/sprite.svg#icon-envelope"></use>`;
+    } else if (field.id === "password") {
+      icon.innerHTML = `<use xlink:href="icons/sprite.svg#icon-lock"></use>`;
+    }
   }
 };
 var valdation = () => {
@@ -30,14 +35,17 @@ var valdation = () => {
   let email = document.getElementById("email");
   let name = document.getElementById("name");
   let noError = true;
+
   if (!emailRegex.test(email.value)) {
     displayX(email);
     noError = false;
   } else removeX(email);
+
   if (!passRegex.test(password.value)) {
     displayX(password);
     noError = false;
   } else removeX(password);
+
   if (!nameRegx.test(name.value)) {
     displayX(name);
     noError = false;
