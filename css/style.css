@@ -29,11 +29,10 @@ a {
 a:hover {
   color: currentColor;
   text-decoration: none;
-}
-nav a:hover {
   color: #fd5949;
   text-decoration: none;
 }
+
 ul {
   list-style: none;
   display: flex;

@@ -8,9 +8,9 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="icons/logo.png" type="image/x-icon" rel="shortcut icon" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/animate.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/normalize.min.css" /> -->
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.js"></script>
@@ -27,7 +27,11 @@
         <nav>
           <ul>
             <li>
-              <a href="index.html"><i class="fas fa-drafting-compass"></i></a>
+              <a href="index.html">
+                <svg class="icon">
+                  <use xlink:href="icons/sprite.svg#icon-circle-compass"></use>
+                </svg>
+              </a>
             </li>
             <li><a href="#">agencies/businesses</a></li>
             <li><a href="#">influencer</a></li>
@@ -55,20 +59,19 @@
         </ul>
       </div>
     </header>
-      <!-- ////////////////////////////////////////////////////// -->
-      <footer class="flex">
-        <div>
-          <ul>
-            <li><a href="index.html">cakesnap</a></li>
-            <li><a href="aboutus.html">about us</a></li>
-            <li><a href="blog.html">blog</a></li>
-            <li><a href="faq.html">faq</a></li>
-          </ul>
-        </div>
-        <div>
-          <p>&copy; 2019, made with ♥ by Medhat.</p>
-        </div>
-      </footer>
-    </div>
+    <!-- ////////////////////////////////////////////////////// -->
+    <footer class="flex">
+      <div>
+        <ul>
+          <li><a href="index.html">cakesnap</a></li>
+          <li><a href="aboutus.html">about us</a></li>
+          <li><a href="blog.html">blog</a></li>
+          <li><a href="faq.html">faq</a></li>
+        </ul>
+      </div>
+      <div>
+        <p>&copy; 2019, made with ♥ by Medhat.</p>
+      </div>
+    </footer>
   </body>
 </html>
