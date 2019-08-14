@@ -1,21 +1,29 @@
 "use strict";
 const submitBtn = document.getElementById("subBut");
-const passRegex = /^.{5,16}$/;
-const emailRegex = /^[a-z]\w{3,15}@\w{3,10}\.\w{2,6}$/i;
-const nameRegx = /^[a-z]{2,12}$/i;
 
+//5 <= password length <= 16
+const passRegex = /^.{5,16}$/; 
+
+const emailRegex = /^[a-z]\w{3,15}@\w{3,10}\.\w{2,6}$/i;
+
+//Name can only contain letters
+const nameRegx = /^[a-z]{2,12}$/i; 
+
+//A function to replace the field icon svg with an 'X' svg
 var displayX = field => {
   let icon = document.getElementById(`${field.id}Icon`);
   icon.innerHTML = `<use class="error" xlink:href="icons/sprite.svg#icon-close"></use>`;
   icon.classList.add("animated", "flash");
   icon.addEventListener("animationend", () =>
-    icon.classList.remove("animated", "flash")
+  icon.classList.remove("animated", "flash")
   );
   //To support older browsers
   icon.addEventListener("webkitanimationend", () =>
-    icon.classList.remove("animated", "shake")
+  icon.classList.remove("animated", "shake")
   );
 };
+
+//A function to replace the 'X' svg with the field icon
 var removeX = field => {
   let icon = document.getElementById(`${field.id}Icon`);
   if (
@@ -30,6 +38,8 @@ var removeX = field => {
     }
   }
 };
+
+//A function to check the validity of the inputs
 var valdation = () => {
   let password = document.getElementById("password");
   let email = document.getElementById("email");
