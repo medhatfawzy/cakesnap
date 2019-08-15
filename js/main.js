@@ -2,41 +2,29 @@
 const submitBtn = document.getElementById("subBut");
 
 //5 <= password length <= 16
-const passRegex = /^.{5,16}$/; 
+const passRegex = /^.{5,16}$/;
 
 const emailRegex = /^[a-z]\w{3,15}@\w{3,10}\.\w{2,6}$/i;
 
 //Name can only contain letters
-const nameRegx = /^[a-z]{2,12}$/i; 
+const nameRegx = /^[a-z]{2,12}$/i;
 
-//A function to replace the field icon svg with an 'X' svg
-var displayX = field => {
+//A function to colour the field icon svg with red and make it flash
+var displayError = field => {
   let icon = document.getElementById(`${field.id}Icon`);
-  icon.innerHTML = `<use class="error" xlink:href="icons/sprite.svg#icon-close"></use>`;
-  icon.classList.add("animated", "flash");
-  icon.addEventListener("animationend", () =>
-  icon.classList.remove("animated", "flash")
-  );
+  icon.classList.add("error", "animated", "flash");
+  icon.addEventListener("animationend", () => {
+    icon.classList.remove("animated", "flash");
+  });
   //To support older browsers
-  icon.addEventListener("webkitanimationend", () =>
-  icon.classList.remove("animated", "shake")
-  );
+  icon.addEventListener("webkitanimationend", () => {
+    icon.classList.remove("animated", "flash", "error");
+  });
 };
 
-//A function to replace the 'X' svg with the field icon
-var removeX = field => {
-  let icon = document.getElementById(`${field.id}Icon`);
-  if (
-    icon.innerHTML === `<use class="error" xlink:href="icons/sprite.svg#icon-close"></use>`
-  ) {
-    if (field.id === "name") {
-      icon.innerHTML = `<use xlink:href="icons/sprite.svg#icon-user"></use>`;
-    } else if (field.id === "email") {
-      icon.innerHTML = `<use xlink:href="icons/sprite.svg#icon-envelope"></use>`;
-    } else if (field.id === "password") {
-      icon.innerHTML = `<use xlink:href="icons/sprite.svg#icon-lock"></use>`;
-    }
-  }
+// A function to colour the icon back to its default colour
+var removeError = field => {
+  document.getElementById(`${field.id}Icon`).classList.remove("error");
 };
 
 //A function to check the validity of the inputs
@@ -47,19 +35,19 @@ var valdation = () => {
   let noError = true;
 
   if (!emailRegex.test(email.value)) {
-    displayX(email);
+    displayError(email);
     noError = false;
-  } else removeX(email);
+  } else removeError(email);
 
   if (!passRegex.test(password.value)) {
-    displayX(password);
+    displayError(password);
     noError = false;
-  } else removeX(password);
+  } else removeError(password);
 
   if (!nameRegx.test(name.value)) {
-    displayX(name);
+    displayError(name);
     noError = false;
-  } else removeX(name);
+  } else removeError(name);
 
   if (noError) document.getElementById("userForm").submit();
 };
